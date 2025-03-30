@@ -1,0 +1,118 @@
+.foot-desc-txt {
+  margin-top: 22px;
+  width: 450px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 34px;
+  color: rgb(3, 3, 3)
+}
+
+.sns-context {
+  margin-top: 17px;
+  width: 137px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(60, 21, 21);
+  padding: 10px;
+}
+
+.foot-category-title {
+  width: 106px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: rgb(3, 3, 3)
+}
+
+.foot-category-link {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Har bir element orasidagi bo'shliq */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+.link-box {
+  padding: 10px 15px;
+  border-radius: 8px; 
+  transition: all 0.3s ease; 
+}
+
+.link-box:hover {
+  background-color: #dd722f; /* Hoverda fon rangi */
+  color: #0073e6; /* Hoverda matn rangi */
+  transform: translateY(-3px); /* Hoverda biroz ko'tarish */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hoverda soya */
+}
+
+.link-box a {
+  text-decoration: none; /* Linkni ostidan chiziqni olib tashlash */
+  color: inherit; /* Matn rangi linkning ichki rangi bilan mos */
+}
+
+.link-box a:hover {
+  text-decoration: underline; /* Hoverda linkni ostiga chiziq qo'shish */
+}
+
+
+.foot-category-link a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.find-us {
+  display: flex;
+  flex-direction: row;
+}
+
+.find-us span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  color: rgb(3, 3, 3)
+}
+
+.find-us div {
+  margin-left: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  color: rgb(3, 3, 3)
+}
+
+.copyright-txt {
+  margin-bottom: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  color: rgb(3, 3, 3)
+}
+
+.foot-category-title:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #d7b686;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.foot-category-title:hover:after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,598 @@
+.home-navbar {
+  position: relative;
+  width: 100%;
+  height: 873px;
+  display: flex;
+  background: url(/public/img/white.jpg);
+  background-size: cover;
+  
+}
+
+.home-navbar .navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 80px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background-color: #fff;
+}
+
+.home-navbar .navbar-container .menu {
+  position: absolute;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 80px;
+  gap: 30px;
+  /* background-color: red; */
+}
+
+.home-navbar .navbar-container .menu .brand-logo {
+  width: 150px ;
+  height: 140px;
+}
+
+.home-navbar .navbar-container .menu .links {
+  min-width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 90px;
+  margin-left: 600px;
+}
+
+.home-navbar .navbar-container .menu .links .signup {
+background: #1976d2;
+border-radius: 10px;
+}
+
+.home-navbar .navbar-container .menu .links .signup .signup-button {
+width: 105px;
+height: 38px;
+border-radius: 10px;
+text-align: center;
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background: #3776cc;
+color: #f8f8ff;
+}
+
+.home-navbar .navbar-container .menu .links .login-button {
+  width: 105px;
+  height: 38px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #3776cc;
+  color: #f8f8ff;
+}
+.home-navbar .navbar-container .menu .user-avatar {
+    width: 60px;
+    height: 65px;
+    border-radius: 24px;
+}
+
+.home-navbar a {
+  text-decoration: none;
+}
+
+
+
+.home-navbar .hover-line a {
+font-size: 25px;
+font-weight: bold;
+color: #2ead49;
+z-index: 100;
+}
+
+.home-navbar .underline {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #d7b686;
+}
+
+.home-navbar .hover-line:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #d7b686;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.home-navbar .hover-line:hover:after {
+  transform: scaleX(1);
+}
+
+.home-navbar .div.hover-line:after {
+  transform-origin: 0% 50%;
+}
+
+.home-navbar .hover-line .card{
+width: 40px;
+display: flex;
+justify-content: center;
+border-radius: 10px;
+}
+
+.home-navbar .navbar-container .detail {
+  position: relative;
+  top: 65%;
+  left: 1000px;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Juda katta bo‘lib ketmasligi uchun */
+  max-width: 1800px; /* Juda keng ekranda cheklov */
+  height: auto;
+  display: flex;
+  flex-direction: column; /* Elementlarni vertikal joylashtirish */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px; /* Ichki bo‘shliq */
+ 
+}
+
+
+/* Swiper rasmlar */
+.home-navbar .navbar-container .detail .logo-img .swiper-image {
+  margin-top: 50px;
+  height: 600px;
+  width: auto;
+}
+
+/* Swiper konfiguratsiyasi */
+.detail .navbar-swiper {
+  padding-top: 1px;
+  width: 100%;
+  height: 900px;
+}
+
+/* Pagination uslubi */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: auto;
+}
+
+/* Pagination bullet */
+.swiper-pagination-bullet {
+  background-color: #115318;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  background-color: #c11414;
+  width: 16px;
+  height: 16px;
+}
+
+/* Matnlarni markazga olish va stil berish */
+.swiper-slide .head-main-txt, 
+.swiper-slide .wel-txt, 
+.swiper-slide .service-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  color: #2ead49;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effekti */
+.swiper-slide .head-main-txt:hover, 
+.swiper-slide .wel-txt:hover, 
+.swiper-slide .service-txt:hover {
+  transform: scale(1.05);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Matnlarning to'g'ri joylashuvi */
+.home-navbar .navbar-container .detail .head-main-txt,
+.home-navbar .navbar-container .detail .wel-txt,
+.home-navbar .navbar-container .detail .service-txt {
+  font-family: "Roboto Serif";
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  text-align: center;
+  max-width: 850px;
+}
+
+.home-navbar .navbar-container .detail .head-main-txt {
+  font-size: 65px;
+  margin-top: 20px;
+}
+
+.home-navbar .navbar-container .detail .wel-txt {
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.home-navbar .navbar-container .detail .service-txt {
+  font-size: 28px;
+  margin-top: 25px;
+}
+
+/* Matn animatsiyasi */
+.head-main-txt, .wel-txt, .service-txt {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animatsiya kechikishi */
+.head-main-txt { animation-delay: 0.3s; }
+.wel-txt { animation-delay: 0.6s; }
+.service-txt { animation-delay: 0.9s; }
+
+
+
+.swiper-slide .shop-button {
+  width: 190px;
+  height: 60px;
+  margin-left: 320px;
+  margin-top: -55px;
+  border-radius: 25px; /* Round the corners */
+  color: #fff; /* White text color */
+  font-size: 36px; /* Font size */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Uppercase text */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text horizontally and vertically */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.swiper-slide .shop-button button{
+  position: absolute;
+  background-color:  #e80505;
+  font-size: 22px;
+  width: 280px;
+  height: 50px;
+}
+
+.swiper-slide .shop-button button:hover {
+  background-color: #0ab237; /* Darker green on hover */
+  transform: scale(1.13); /* Slight scale effect on hover */
+}
+
+.swiper-slide .shop-button:active {
+  background-color: #1e7e34; /* Even darker green when the button is clicked */
+  transform: scale(1); /* Reset scale when the button is pressed */
+}
+
+.swiper-slide .shop-button:focus {
+  outline: none; /* Remove the outline when focused */
+}
+
+.swiper-slide .shop-button .MuiButton-label {
+  font-size: 16px; /* Ensure button text fits properly */
+}
+
+.arrow-icon {
+  width: 50px; /* Ikonning o'lchamini belgilash */
+  height: 50px; /* Ikonning balandligini belgilash */
+  transform: rotate(180deg); /* Ikonni o'ngga burish */
+  position: absolute; /* Ikonni kerakli joyga joylashtirish */
+  right: 90px;
+  bottom: 180px; /* Ikonni pastga joylashtirish */
+  left: 200px;
+  /* Animatsiya qo'shish */
+  animation: shake 1s ease-in-out infinite; /* Animatsiyani yaratish */
+}
+
+/* Animatsiya uchun @keyframes */
+@keyframes shake {
+  0% {
+    transform: rotate(180deg) translateX(0); /* Boshlang'ich holat */
+  }
+  25% {
+    transform: rotate(180deg) translateX(-5px); /* Chapga harakatlanish */
+  }
+  50% {
+    transform: rotate(180deg) translateX(5px); /* O'ngga harakatlanish */
+  }
+  75% {
+    transform: rotate(180deg) translateX(-5px); /* Chapga harakatlanish */
+  }
+  100% {
+    transform: rotate(180deg) translateX(0); /* Boshlang'ich holatga qaytish */
+  }
+}
+
+
+
+
+
+/* OTHER NAVBAR STARTS FROM HERE */
+
+.other-navbar {
+    width: 100%;
+    height: 400px;
+    display: flexbox;
+    background-size: cover;
+  }  
+
+  .other-navbar .navbar-container {
+    width: 1800px;
+    margin-top: 55px;
+    height: 52px;
+    padding: 0px;
+}
+
+.other-navbar .navbar-container .menu {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.other-navbar .navbar-container .menu .brand-logo {
+    width: 125px ;
+    height: 100px;
+}
+
+.other-navbar .navbar-container .menu .links {
+    min-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.other-navbar .navbar-container .menu .links .signup {
+  background: #1976d2;
+  border-radius: 10px;
+}
+
+.other-navbar .navbar-container .menu .links .signup .signup-button {
+  width: 105px;
+  height: 38px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #3776cc;
+  color: #f8f8ff;
+}
+
+.other-navbar .navbar-container .menu .links .login-button {
+    width: 105px;
+    height: 38px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #3776cc;
+    color: #f8f8ff;
+}
+
+.other-navbar .navbar-container .menu .user-avatar {
+    width: 60px;
+    height: 65px;
+    border-radius: 24px;
+  }
+
+.other-navbar a {
+    text-decoration: none;
+}
+
+.other-navbar .hover-line a {
+  font-size: 25px;
+  font-weight: bold;
+  color: #2ead49;
+  z-index: 100;
+}
+
+.other-navbar .hover-line #basic-button{
+  width: 70px;
+  height: 60px;
+}
+
+.other-navbar .underline {
+    display: block;
+    content: "";
+    border-bottom: solid 2px #d7b686;
+}
+
+.other-navbar .hover-line:after {
+    display: block;
+    content: "";
+    border-bottom: solid 2px #d7b686;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.other-navbar .hover-line:hover:after {
+    transform: scaleX(1);
+}
+
+.other-navbar .div.hover-line:after {
+    transform-origin: 0% 50%;
+}
+
+.other-navbar .hover-line .card {
+  /* background-color:#2ead49; */
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
+/* BASKET */
+
+.basket-frame {
+    position: relative;
+    padding: 10px 4px 0px 4px;
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8ff;
+    border-radius: 16px;
+  }
+  
+  .basket-frame .all-check-box {
+    padding: 0px 6px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #25a44b;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #343434;
+  }
+  
+  .basket-frame .basket-info-box {
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .basket-info-box .product-img {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 29px;
+  }
+  
+  .basket-info-box .product-name {
+    margin-left: 11px;
+    width: 185px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+  
+  .basket-info-box .product-price {
+    width: 80px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #25a44b;
+  }
+  
+  .basket-info-box
+    .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 6.5px 14px;
+  }
+  
+  .basket-info-box .css-ece9u5 {
+    min-width: 72px;
+  }
+  
+  .basket-frame .cancel-btn {
+    position: absolute;
+    top: 33%;
+    right: 2%;
+    cursor: pointer;
+  }
+  
+  .basket-frame .basket-order {
+    margin-top: 10px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .basket-order .price {
+    width: 200px;
+    display: flex;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+  
+  .basket-frame .orders-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  .basket-frame .orders-wrapper::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .basket-frame .orders-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  .basket-frame .orders-wrapper::-webkit-scrollbar-track {
+    background: #25a44b;
+  }
+  
+  .basket-frame .orders-main-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+  }

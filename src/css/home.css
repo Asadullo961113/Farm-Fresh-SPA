@@ -1,0 +1,797 @@
+.homepage {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+  }
+  
+  /* STATISTICS */
+  
+  .homepage .static-frame {
+    position: relative;
+    width:  100%;
+    height: 1300px;
+   
+    
+  }
+
+  .homepage .static-frame .info {
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 50px;
+    margin-right: 230px;
+    align-items: center;
+    /* gap: 430px; */
+  }
+
+  .homepage .static-frame .info .foto{
+    margin-left: 150px;
+    margin-top: 250px;
+    height: 700px;
+    width: 980px;
+  }
+  
+  .homepage .static-frame .info .static-box {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column; /* Statistikani ustun shaklida joylashtiradi */
+    align-items: center;
+    margin-left: 280px;
+    gap: 30px; /* Har bir statistik element orasidagi masofa */
+    padding: 20px;
+  }
+  
+  .homepage .static-frame .info .static-box .static-user,
+  .homepage .static-frame .info .static-box .static-product,
+  .homepage .static-frame .info .static-box .static-sale,
+  .homepage .static-frame .info .static-box .static-customer {
+    display: flex;
+    flex-direction: row; /* Tasvir va matnni yonma-yon joylashtiradi */
+    align-items: center;
+    background: #f9f9f9; /* Yengil kulrang fon */
+    border: 1px solid #ddd; /* Nozik chegara */
+    border-radius: 12px; /* Yumaloq burchaklar */
+    padding: 20px;
+    width: 350px; /* Har bir bo‘lim kengligi */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Yengil soya */
+    gap: 15px; /* Tasvir va matn o‘rtasidagi masofa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effekt uchun */
+  }
+  
+  .homepage .static-frame .info .static-box .static-user:hover,
+  .homepage .static-frame .info .static-box .static-product:hover,
+  .homepage .static-frame .info .static-box .static-sale:hover,
+  .homepage .static-frame .info .static-box .static-customer:hover {
+    transform: translateY(-5px); /* Hover qilinganda biroz yuqoriga ko‘tariladi */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Hover paytida kuchliroq soya */
+  }
+  
+  .homepage .static-frame .info .static-box .static-img {
+    width: 60px; /* Tasvir kengligi */
+    height: 60px; /* Tasvir balandligi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Dumaloq tasvir konteyneri */
+    background: #f0f0f0; /* Kulrang fon */
+    overflow: hidden;
+    
+  }
+  
+  .homepage .static-frame .info .static-box .static-img img {
+    width: 100%; /* Tasvirni to‘liq ko‘rsatadi */
+    height: 100%;
+    object-fit: cover; /* Tasvirni chiroyli joylashtiradi */
+  }
+  
+  .homepage .static-frame .info .static-box .static-content {
+    display: flex;
+    flex-direction: column; /* static-num va static-text ustun shaklida joylashadi */
+    align-items: flex-start; /* Matn chap tomonda joylashadi */
+  }
+  
+  .homepage .static-frame .info .static-box .static-num {
+    font-family: "Poppins", sans-serif;
+    font-size: 54px;
+    font-weight: 600;
+    color: #2ead49;
+    margin: 0; /* Qo‘shimcha joyni olib tashlash */
+  }
+  
+  .homepage .static-frame .info .static-box .static-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #555; /* Matn uchun neytral rang */
+  }
+  
+  
+
+ 
+
+  .homepage .static-frame .shop-category-section {
+    position:relative;
+    display: flex;
+    justify-content: center; /* Tugmalarni markazga joylashtiradi */
+    align-items: center; /* Vertikal markazlash */
+    width: 100%; /* Barcha kenglikni egallaydi */
+    height: 400px;
+    margin-top: 720px;
+    color: #fff;
+    
+    }
+
+    .homepage .static-frame .shop-category-section .category-title{
+    margin-bottom: 80px;
+    margin-top: 140px;
+    font-family: "Roboto Serif";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    color: #000;
+    border-bottom: 3px solid #4CAF50; 
+    padding-bottom: 10px;
+  }
+  
+  .shop-category-container {
+    display: flex;
+    flex-direction: row; /* Tugmalarni yonma-yon joylashtiradi */
+    gap: 100px; /* Tugmalar orasidagi masofa */
+    margin-top: 50px;
+    padding-left: 20px;
+  }
+  
+  .shop-category-container button {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    /* justify-content: center;  */
+    /* padding-left: 25px;  */
+    font-size: 20px;
+    background-color: #fff;
+    border: none; 
+    width: 250px;
+    height: 150px; 
+    text-align: center; 
+  }
+
+  
+  
+  .title-button .MuiButton-startIcon {
+    margin-left: 7px; /* Ikon va matn orasida masofa */
+    background-color: #fff;
+  }
+  
+  
+  
+  .shop-category-container button img {
+    display: flex;
+    flex-direction: column; 
+    /* align-items: center; 
+    justify-content: center; */
+    width: 180px; 
+    height: 170px;
+    margin-bottom: 8px; 
+    /* margin-left: 40px; */
+    border-radius: 50%; /* Rasmni yumaloq qilish */
+    border: 3px solid rgb(79, 213, 82); /* Qalin qora chegara */
+    background-color: #fff;
+}
+
+  
+  
+  /* FRESH ARRIVALS */
+  
+  .homepage .fresh-arrivals {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    background-color: #fff;
+    margin-top: 380px;
+  }
+  .homepage .fresh-arrivals .fresh-section {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage .fresh-arrivals .fresh-section .category-title {
+    text-align: center;
+    font-family: "Roboto Serif";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    color: #000;
+    border-bottom: 3px solid #4CAF50; 
+    padding-bottom: 10px;
+  }
+  
+  
+  .homepage .fresh-arrivals .fresh-section .category-links {
+    margin-top: 60px;
+    font-size: 20px;
+    gap: 20px;
+  }
+ 
+  
+  .category-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Default text color */
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 0;
+    text-decoration: underline;
+    text-decoration-color: #2ead49;
+  }
+  
+  .category-link.active {
+    color: #2ead49; /* Active link color (e.g., blue) */
+  }
+  
+  .category-link:hover {
+    cursor: pointer;
+  }
+  
+  /* Underline effect */
+  .category-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-link:hover::after {
+    background-color: #2ead49; /* Underline color on hover */
+  }
+  
+  .category-link.active::after {
+    background-color: #2ead49; /* Active link underline */
+  }
+  
+  .category-link:hover {
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+  }
+  
+
+  .homepage .fresh-arrivals .fresh-section .cards-frame {
+      width: 100%;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+ /* Karta umumiy uslubi */
+.homepage .fresh-arrivals .fresh-section .cards-frame .card {
+  height: 535px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.homepage .fresh-arrivals .fresh-section .cards-frame .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Rasmni moslashtirish */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Kontent joylashuvi */
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Mahsulot nomi */
+.homepage .cards-frame .card .card-content .product-name {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Narx va boshqa elementlar */
+.homepage .cards-frame .card .card-content
+.product-price {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: red;
+}
+
+.homepage .cards-frame .card .card-content
+.product-left {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* Ko'rishlar soni */
+.card-content .product-views {
+  font-size: 20px;
+  margin-left: 230px;
+  margin-top: -145px;
+  color: #333;
+}
+
+
+/* Karta osti qismini bezash */
+.card-footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.homepage .cards-frame .card .card-footer .product-description {
+  font-size: 1.9rem;
+  color: #050505;
+  display: flex;
+  align-items: center;
+}
+
+.product-description svg {
+  margin-right: 8px;
+}
+
+
+.homepage .fresh-arrivals .product-sale {
+    position: absolute;
+    margin-top: 10px;
+    z-index: 100;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff9200;
+    box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: #f8f8ff;
+  } 
+
+  
+  /* Sale Products */
+  
+  .homepage .new-products-frame {
+    width: 100%;
+    height: 805px;
+    background: #fff;
+    display: flex;
+  }
+  
+  .homepage .main {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homepage .new-products-frame .category-title {
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    border-bottom: 3px solid #4CAF50; 
+    padding-bottom: 10px;
+  }
+  
+  .homepage .new-products-frame .main .cards-frame {
+    width: 100%;
+    margin: 47px 2px 2px 2px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .homepage .new-products-frame .main .card {
+    height: 335px;
+    width: 290px;
+    cursor: pointer;
+  }
+
+  .homepage .new-products-frame .main .card .discount{
+    margin-left: 180px;
+    margin-top: 12px;
+    font-size: 25px;
+  }
+  
+  .homepage .new-products-frame .product-sale {
+    position: absolute;
+    margin-top: 10px;
+    z-index: 100;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff9200;
+    box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: #f8f8ff;
+  }
+  
+  .homepage .new-products-frame .product-detail {
+    width: auto;
+    height: 49%;
+    display: flex;
+    justify-content: center;
+    margin-top: -12px;
+    border-top: 1px solid;
+    border-color: #f8f8ff;
+    background-color: #fafbfb;
+  }
+  
+  .homepage .new-products-frame .product-detail .info {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+  
+  .homepage .new-products-frame .product-detail .title {
+    width: 80px;           /* Kenglikni belgilash kerak */
+    font-weight: 500;
+    font-size: 20px;
+    white-space: nowrap;    /* Matnni bitta qatorga tushirish */
+    overflow: hidden;       /* Sig‘magan qismini yashirish */
+    text-overflow: ellipsis; /* Qisqartirish */
+    margin-top: 50px;
+  }
+  
+  .homepage .new-products-frame .product-detail .info .prices{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .homepage .new-products-frame .product-detail .info .prices .oldPrice {
+    margin-left: 3px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #999; 
+    text-decoration: line-through;
+    text-decoration-color: #999;
+    margin-top: 0;
+    width: auto;
+  }
+  
+  .homepage .new-products-frame .product-detail .info .prices .newPrice {
+    font-weight: 500;
+    font-size: 25px;
+    color: red;
+    margin-top: 10px; /* oldPrice va newPrice o‘rtasidagi bo‘shliq */
+    width: auto;
+  }
+  
+  
+  .homepage .new-products-frame .product-detail .views {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 32px;
+    color: #333;
+  }
+  
+  .homepage .new-products-frame .no-data {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #e3c08d;
+  }
+  
+  /* Advertisement */
+  
+  .homepage .ads-restaurant-frame {
+    width: 100%;
+    height: 693px;
+    display: flex;
+    overflow: hidden;
+    transform: perspective(0px);
+    box-shadow: -3px 0px 20px 14px #34343480;
+  }
+  
+  .homepage .ads-restaurant-frame .ads-video {
+    width: 100%;
+    background: #0c0e12;
+    display: flex;
+    box-shadow: 0px -8px 90px rgb(215 215 255);
+    transform: scale(1.5);
+    overflow: hidden;
+  }
+  
+  /* Active Users */
+  
+  .homepage .active-users-frame {
+    width: 100%;
+    height: 550px;
+    background: #f8f8ff;
+    display: flex;
+  }
+  
+  .homepage .active-users-frame .main {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homepage .active-users-frame .category-title {
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    border-bottom: 3px solid #4CAF50; 
+    padding-bottom: 10px;
+  }
+  
+  .homepage .cards-frame {
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+  
+  .homepage .cards-frame .card {
+    margin: 5px;
+    min-height: 305px;
+    min-width: 305px;
+    cursor: pointer;
+  }
+  
+  .homepage .cards-frame .member-nickname {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .homepage .cards-frame .no-data {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #e3c08d;
+  }
+  
+  /* Events */
+  .homepage .events-frame {
+    width: 100%;
+    height: 745px;
+    background: #f8f8ff;
+    display: flex;
+  }
+  
+  .homepage .events-frame .category-title {
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    padding-top: 20px;
+    border-bottom: 3px solid #4CAF50; 
+    padding-bottom: 10px;
+  }
+  
+  .homepage .events-frame .events-main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .homepage .events-frame .events-main .events-text {
+    width: auto;
+    height: 70px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homepage .events-frame .events-main .prev-next-frame {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 40px 0 40px 0;
+    height: 25px;
+  }
+  
+  .homepage .events-frame .dot-frame-pagination {
+    position: relative;
+    width: auto;
+    display: flex;
+  }
+  
+  .homepage .events-frame .events-main .events-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .homepage .events-frame .events-info .events-info-frame {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homepage .events-frame .events-img {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    border-radius: 10px;
+    background-size: cover;
+  }
+  
+  .homepage .events-frame .events-desc {
+    position: absolute;
+    margin-bottom: 200px;
+    margin-right: 250px;
+    padding: 10px;
+    display: flex;
+    width: 42%;
+    height: 40%;
+    bottom: 5px;
+    background: #7ce26a;
+    box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+    border-radius: 8px;
+  }
+  
+  .homepage .events-frame .events-desc .events-bott {
+    width: 97%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .homepage .events-frame .events-desc .events-bott .bott-left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .homepage .events-frame .bott-left .event-title-speaker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .homepage .events-frame .event-title-speaker .event-organizator {
+    display: flex;
+    align-items: center;
+  }
+  
+  .homepage .events-frame .event-title-speaker .event-organizator img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .homepage .events-frame .event-organizator .spec-text-author {
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    line-height: 34px;
+    color: #140342;
+  }
+  
+  .homepage .events-frame .bott-left .text-desc {
+    margin-top: 10px;
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: #4f547b;
+  }
+  
+  .homepage .events-frame .bott-left .bott-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    height: 16px;
+  }
+  
+  .homepage .events-frame .bott-info .bott-info-main {
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4f547b;
+  }
+  
+  .homepage .events-frame .bott-info .bott-info-main img {
+    margin-right: 10px;
+  }
+  
+  .homepage .events-frame .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .homepage .events-frame .swiper-pagination-bullet {
+    margin-right: 5px;
+    width: 8px;
+    height: 8px;
+    text-align: center;
+    opacity: 1;
+    background: #f8f8ff;
+    border-radius: 50%;
+  }
+  
+  .homepage .events-frame .swiper-pagination-bullet-active {
+    background: #343434;
+    border-radius: 50%;
+  }
