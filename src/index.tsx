@@ -8,7 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './app/material/MaterialTheme';
 import './css/index.css';
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter, BrowserRouter as Router} from "react-router-dom";
 import ContextProvider from './app/context/ContextProvider';
 import { CategoryProvider } from './app/context/CategoryContext';
 import { SocketProvider } from './app/context/SocketContext';
@@ -18,23 +18,22 @@ const root = createRoot(container)
 root.render(
  
   <React.StrictMode>
-    <CategoryProvider>
+  <CategoryProvider>
     <Provider store={store}>
       <SocketProvider>
-      <ContextProvider>
-  
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Router>
-            <App/>
-          </Router>
-        </ThemeProvider>
-        
-      </ContextProvider>
+        <ContextProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <BrowserRouter> {/* BrowserRouter ishlatish */}
+              <App />
+            </BrowserRouter>
+          </ThemeProvider>
+        </ContextProvider>
       </SocketProvider>
     </Provider>
   </CategoryProvider>
-  </React.StrictMode>
+</React.StrictMode>
+
  
 );
 

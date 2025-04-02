@@ -8,7 +8,7 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useHistory, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Dispatch } from "@reduxjs/toolkit";
 import { setProducts } from "./slice";
 import { Product, ProductInquiry } from "../../../lib/types/product";
@@ -48,7 +48,7 @@ export default function Products(props: ProductsProps) {
   const [searchText, setSearchText] = useState<string>("");
 
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
 
 
@@ -58,10 +58,7 @@ export default function Products(props: ProductsProps) {
     const newCategory = event.target.value;
     setSelectedCategory(newCategory); // Contextni yangilash
     // URLni yangilash
-    history.push({
-      pathname: "/products",
-      search: `?category=${newCategory}&sort=${productSearch.order}`,
-    });
+    navigate(`/products?category=${newCategory}&sort=${productSearch.order}`);
   };
   
   
@@ -121,10 +118,7 @@ export default function Products(props: ProductsProps) {
     }));
     
     // URLni yangilash
-    history.push({
-      pathname: "/products",
-      search: `?category=${collection}&sort=${productSearch.order}`,
-    });
+    navigate(`/products?category=${collection}&sort=${productSearch.order}`);
   };
 
   
@@ -163,8 +157,9 @@ export default function Products(props: ProductsProps) {
   };
 
   const chooseDishHandler = (id: string) => {
-    history.push(`/products/${id}`);
+    navigate(`/products/${id}`);
   };
+  
   
 
   return (

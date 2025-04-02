@@ -1,12 +1,14 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link,useNavigate, useLocation } from "react-router-dom";
 import { ProductCollection } from "../../../lib/enums/product.enum";
-import  useNavigate  from "react-router-dom";
 import { useCategory } from "../../context/CategoryContext";
+
 
 export default function Statistics() {
   const location = useLocation();
+
+  const navigate = useNavigate();
 
   const [productSearch, setProductSearch] = useState({
     page: 1,
@@ -37,11 +39,10 @@ export default function Statistics() {
     }
   }, [location.search]); // Faqat location.search o'zgarganida ishga tushadi
 
-  const history = useHistory();  // useHistory hook'ini chaqirish
 
   // Kategoriyani tanlash va manzilga o'tish
   const handleCategoryClick = (other: string) => {
-    history.push(`/products?category=${other}&sort=createdAt`);  // Push bilan navigatsiya
+    navigate(`/products?category=${other}&sort=createdAt`); // `push` emas, `navigate`
   };
 
   return (

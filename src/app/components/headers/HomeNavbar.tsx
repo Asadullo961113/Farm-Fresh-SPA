@@ -8,7 +8,7 @@ import { Logout, Rotate90DegreesCcw, RotateRight } from "@mui/icons-material";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css'; // Swiper CSS
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-import { Route, Switch, NavLink, Link } from 'react-router-dom'; // To'g'ri import
+import { Route, NavLink, Link } from 'react-router-dom'; // To'g'ri import
 import { transform } from "typescript";
 
 
@@ -95,28 +95,47 @@ export function HomeNavbar(props: HomeNavbarProps) {
         <div className="aka" >
         <Stack className="menu">
           <Box>
-            <NavLink to={"/"} activeClassName="underline">
-              <img src="/icons/Farm-Fresh logo.jpg" className="brand-logo" />
-            </NavLink>
+          <NavLink 
+                to="/" 
+                className={({ isActive }) => (isActive ? "underline" : "")}
+              >
+                <img src="/icons/Farm-Fresh logo.jpg" className="brand-logo" />
+          </NavLink>
+
           </Box>
           <Stack className="links">
-            <Box className={"hover-line"}>
-              <NavLink to={"/"} activeClassName="underline">Home</NavLink>
-            </Box>
-            <Box className={"hover-line"}>
-              <NavLink to={"/products"} activeClassName="underline">Products</NavLink>
-            </Box>
-            <Box className={"hover-line"}>
-              <NavLink to={"/help"} activeClassName="underline">Help</NavLink>
-            </Box>
+          <Box className={"hover-line"}>
+                <NavLink to="/" className={({ isActive }) => (isActive ? "underline" : "")}>
+                  Home
+                </NavLink>
+              </Box>
+              <Box className={"hover-line"}>
+                <NavLink to="/products" className={({ isActive }) => (isActive ? "underline" : "")}>
+                  Products
+                </NavLink>
+              </Box>
+              <Box className={"hover-line"}>
+                <NavLink to="/help" className={({ isActive }) => (isActive ? "underline" : "")}>
+                  Help
+                </NavLink>
+          </Box>
+
             {authMember && (
               <>
-                <Box className={"hover-line"}>
-                  <NavLink to={"/orders"} activeClassName="underline">Orders</NavLink>
-                </Box>
-                <Box className={"hover-line"}>
-                  <NavLink to={"/member-page"} activeClassName="underline">MyPage</NavLink>
-                </Box>
+                <NavLink 
+                      to="/orders" 
+                      className={({ isActive }) => (isActive ? "underline" : "")}
+                    >
+                      Orders
+                </NavLink>
+
+                <NavLink 
+                      to="/member-page" 
+                      className={({ isActive }) => (isActive ? "underline" : "")}
+                    >
+                      MyPage
+                </NavLink>
+
               </>
             )}
             {/* Basket */}

@@ -1,27 +1,23 @@
-import React from "react"
-import {Route, Switch, useRouteMatch } from "react-router-dom";
+import React from "react";
+import { Route, Routes, useMatch } from "react-router-dom";
 import ChosenProduct from "./ChosenProduct";
-import Products from "./Products"
+import Products from "./Products";
 import "../../../css/product.css";
 import { CartItem } from "../../../lib/types/search";
 
 interface ProductsPageProps {
-  onAdd: (item: CartItem) => void
+  onAdd: (item: CartItem) => void;
 }
 
-export function ProductsPage(props: ProductsPageProps) {
-  const  {onAdd} = props
-  const products = useRouteMatch();
+export function ProductsPage({ onAdd }: ProductsPageProps) {
+  const match = useMatch("/products/*"); // Pathni tekshirish uchun
+
   return (
     <div className="products-page">
-      <Switch>
-        <Route path={`${products.path}/:productId`}>
-          <ChosenProduct onAdd = {onAdd}/>
-        </Route>
-        <Route path={`${products.path}`}>
-          <Products onAdd = {onAdd}/>
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path=":productId" element={<ChosenProduct onAdd={onAdd} />} />
+        <Route path="/" element={<Products onAdd={onAdd} />} />
+      </Routes>
     </div>
   );
 }

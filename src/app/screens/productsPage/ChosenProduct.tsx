@@ -47,18 +47,22 @@ export default function ChosenProduct(props: ChosenProductsProps) {
   const {setRestaurant, setChosenProduct} = actionDispatch(useDispatch())
   const {chosenProduct} = useSelector(chosenProductsRetriever)
   const {restaurant} = useSelector(restaurantRetriever)
-  useEffect (()=> {
-    const product = new ProductService()
+  useEffect(() => {
+    if (!productId) return;
+  
+    const product = new ProductService();
     product
       .getProduct(productId)
       .then((data) => setChosenProduct(data))
       .catch((err) => console.log(err));
-    const member = new MemberService()
+  
+    const member = new MemberService();
     member
-    .getRestaurant()
-    .then((data) => setRestaurant(data))
-    .catch((err) => console.log(err));
-  }, [])
+      .getRestaurant()
+      .then((data) => setRestaurant(data))
+      .catch((err) => console.log(err));
+  }, [productId]); 
+  
   if(!chosenProduct) return null
   return (
     <div className={"chosen-product"}>

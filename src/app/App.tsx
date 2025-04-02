@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link, Route, Switch, useLocation } from 'react-router-dom';
+import {Link, Route, Routes, useLocation } from 'react-router-dom';
 // import { RippleBadge } from './MaterialTheme/styled';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import  About  from './screens/userPage';
@@ -87,13 +87,13 @@ function App() {
             handleLogoutRequest = {handleLogoutRequest}
             /> 
         }
-      <Switch>
-        <Route path="/products"><ProductsPage onAdd = {onAdd}/></Route>
-        <Route path="/orders"><OrdersPage /></Route>
-        <Route path="/member-page"><UserPage/></Route>
-        <Route path="/help"><HelpPage /></Route>
-        <Route path="/"><HomePage/></Route>
-      </Switch>
+    <Routes>
+      <Route path="/products" element={<ProductsPage onAdd={onAdd} />} />
+      <Route path="/orders" element={<OrdersPage />} />
+      <Route path="/member-page" element={<UserPage />} />
+      <Route path="/help" element={<HelpPage />} />
+      <Route path="/" element={<HomePage />} />
+    </Routes>
       <Footer/>
       <AuthenticationModal 
         signupOpen={signupOpen} 

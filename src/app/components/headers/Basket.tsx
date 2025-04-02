@@ -12,7 +12,7 @@ import { DeleteForever } from "@mui/icons-material";
 import { sweetErrorHandling } from "../../../lib/sweetAlert";
 import  {useGlobals}  from "../../hooks/useGlobals";
 import OrderService from "../../services/OrderService";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface BasketProps {
   cartItems: CartItem[];
@@ -26,7 +26,7 @@ export default function Basket(props: BasketProps) {
   const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = props;
   
   const { authMember, setOrderBuilder } = useGlobals();
-  const history = useHistory();
+  const navigate = useNavigate();
   const itemsPrice: number = cartItems.reduce(
     (a: number, c: CartItem) => a + c.quantity * c.price,
     0
@@ -53,7 +53,7 @@ export default function Basket(props: BasketProps) {
       onDeleteAll();
       // Refresh via Context
       setOrderBuilder(new Date());
-      history.push("/orders");
+      navigate("/orders");
     } catch (err) {
       console.log(err);
       sweetErrorHandling(err).then();

@@ -59,34 +59,35 @@ export function OtherNavbar(props: OtherNavbarProps) {
     <div className="other-navbar" ref={scrollRef}>
       <Container className="navbar-container">
         <Stack className="menu">
-          <Box>
-            <NavLink to={"/"} activeClassName="underline">
-              <img src="/icons/Farm-Fresh logo.jpg" className="brand-logo" />
+        <Box>
+          <NavLink to={"/"} className={({ isActive }) => (isActive ? "underline" : "")}>
+            <img src="/icons/Farm-Fresh logo.jpg" className="brand-logo" />
+          </NavLink>
+        </Box>
+        <Stack className="links">
+          <Box className={"hover-line"}>
+            <NavLink to={"/"} className={({ isActive }) => (isActive ? "underline" : "")}>
+              Home
             </NavLink>
           </Box>
-          <Stack className="links">
-            <Box className={"hover-line"}>
-              {" "}
-              <NavLink to={"/"}>Home</NavLink>
-            </Box>
-            <Box className={"hover-line"}>
-              {" "}
-              <NavLink to={"/products"} activeClassName="underline">
-                Produts
-              </NavLink>
-            </Box>
-            <Box className={"hover-line"}>
-              {" "}
-              <NavLink to={"/help"} activeClassName="underline">
-                Help
-              </NavLink>
-            </Box>
+          <Box className={"hover-line"}>
+            <NavLink to={"/products"} className={({ isActive }) => (isActive ? "underline" : "")}>
+              Products
+            </NavLink>
+          </Box>
+          <Box className={"hover-line"}>
+            <NavLink to={"/help"} className={({ isActive }) => (isActive ? "underline" : "")}>
+              Help
+            </NavLink>
+          </Box>
+
             <Box>
               {authMember ? (
                 <Box className={"hover-line"}>
-                  <NavLink to={"/orders"} activeClassName="underline">
+                  <NavLink to="/orders" className={({ isActive }) => (isActive ? "underline" : "")}>
                     Orders
                   </NavLink>
+
                 </Box>
               ) : null}
             </Box>
@@ -94,9 +95,10 @@ export function OtherNavbar(props: OtherNavbarProps) {
               {authMember ? (
                 <Box className={"hover-line"}>
                   {" "}
-                  <NavLink to={"/member-page"} activeClassName="underline">
+                  <NavLink to="/member-page" className={({ isActive }) => (isActive ? "underline" : "")}>
                     MyPage
                   </NavLink>
+
                 </Box>
               ) : null}
             </Box>
