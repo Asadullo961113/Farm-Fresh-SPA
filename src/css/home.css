@@ -4,184 +4,196 @@
     background-color: #fff;
   }
   
-  /* STATISTICS */
-  
-  .homepage .static-frame {
-    position: relative;
-    width:  100%;
-    height: 1300px;
-   
-    
-  }
+/* === STATISTICS SECTION === */
 
-  .homepage .static-frame .info {
-    position: relative;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    margin-top: 50px;
-    margin-right: 230px;
-    align-items: center;
-    /* gap: 430px; */
-  }
-
-  .homepage .static-frame .info .foto{
-    margin-left: 150px;
-    margin-top: 250px;
-    height: 700px;
-    width: 980px;
-  }
-  
-  .homepage .static-frame .info .static-box {
-    margin-top: 250px;
-    display: flex;
-    flex-direction: column; /* Statistikani ustun shaklida joylashtiradi */
-    align-items: center;
-    margin-left: 280px;
-    gap: 30px; /* Har bir statistik element orasidagi masofa */
-    padding: 20px;
-  }
-  
-  .homepage .static-frame .info .static-box .static-user,
-  .homepage .static-frame .info .static-box .static-product,
-  .homepage .static-frame .info .static-box .static-sale,
-  .homepage .static-frame .info .static-box .static-customer {
-    display: flex;
-    flex-direction: row; /* Tasvir va matnni yonma-yon joylashtiradi */
-    align-items: center;
-    background: #f9f9f9; /* Yengil kulrang fon */
-    border: 1px solid #ddd; /* Nozik chegara */
-    border-radius: 12px; /* Yumaloq burchaklar */
-    padding: 20px;
-    width: 350px; /* Har bir bo‘lim kengligi */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Yengil soya */
-    gap: 15px; /* Tasvir va matn o‘rtasidagi masofa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effekt uchun */
-  }
-  
-  .homepage .static-frame .info .static-box .static-user:hover,
-  .homepage .static-frame .info .static-box .static-product:hover,
-  .homepage .static-frame .info .static-box .static-sale:hover,
-  .homepage .static-frame .info .static-box .static-customer:hover {
-    transform: translateY(-5px); /* Hover qilinganda biroz yuqoriga ko‘tariladi */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Hover paytida kuchliroq soya */
-  }
-  
-  .homepage .static-frame .info .static-box .static-img {
-    width: 60px; /* Tasvir kengligi */
-    height: 60px; /* Tasvir balandligi */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* Dumaloq tasvir konteyneri */
-    background: #f0f0f0; /* Kulrang fon */
-    overflow: hidden;
-    
-  }
-  
-  .homepage .static-frame .info .static-box .static-img img {
-    width: 100%; /* Tasvirni to‘liq ko‘rsatadi */
-    height: 100%;
-    object-fit: cover; /* Tasvirni chiroyli joylashtiradi */
-  }
-  
-  .homepage .static-frame .info .static-box .static-content {
-    display: flex;
-    flex-direction: column; /* static-num va static-text ustun shaklida joylashadi */
-    align-items: flex-start; /* Matn chap tomonda joylashadi */
-  }
-  
-  .homepage .static-frame .info .static-box .static-num {
-    font-family: "Poppins", sans-serif;
-    font-size: 54px;
-    font-weight: 600;
-    color: #2ead49;
-    margin: 0; /* Qo‘shimcha joyni olib tashlash */
-  }
-  
-  .homepage .static-frame .info .static-box .static-text {
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: #555; /* Matn uchun neytral rang */
-  }
-  
-  
-
- 
-
-  .homepage .static-frame .shop-category-section {
-    position:relative;
-    display: flex;
-    justify-content: center; /* Tugmalarni markazga joylashtiradi */
-    align-items: center; /* Vertikal markazlash */
-    width: 100%; /* Barcha kenglikni egallaydi */
-    height: 400px;
-    margin-top: 720px;
-    color: #fff;
-    
-    }
-
-    .homepage .static-frame .shop-category-section .category-title{
-    margin-bottom: 80px;
-    margin-top: 140px;
-    font-family: "Roboto Serif";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 1.44px;
-    color: #000;
-    border-bottom: 3px solid #4CAF50; 
-    padding-bottom: 10px;
-  }
-  
-  .shop-category-container {
-    display: flex;
-    flex-direction: row; /* Tugmalarni yonma-yon joylashtiradi */
-    gap: 100px; /* Tugmalar orasidagi masofa */
-    margin-top: 50px;
-    padding-left: 20px;
-  }
-  
-  .shop-category-container button {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    /* justify-content: center;  */
-    /* padding-left: 25px;  */
-    font-size: 20px;
-    background-color: #fff;
-    border: none; 
-    width: 250px;
-    height: 150px; 
-    text-align: center; 
-  }
-
-  
-  
-  .title-button .MuiButton-startIcon {
-    margin-left: 7px; /* Ikon va matn orasida masofa */
-    background-color: #fff;
-  }
-  
-  
-  
-  .shop-category-container button img {
-    display: flex;
-    flex-direction: column; 
-    /* align-items: center; 
-    justify-content: center; */
-    width: 180px; 
-    height: 170px;
-    margin-bottom: 8px; 
-    /* margin-left: 40px; */
-    border-radius: 50%; /* Rasmni yumaloq qilish */
-    border: 3px solid rgb(79, 213, 82); /* Qalin qora chegara */
-    background-color: #fff;
+.homepage .static-frame {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
 }
+
+.homepage .static-frame .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.homepage .static-frame .info .foto {
+  height: 500px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.homepage .static-frame .info .static-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Card styles */
+.static-box > .static-user,
+.static-box > .static-product,
+.static-box > .static-sale,
+.static-box > .static-customer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 18px 24px;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.static-box > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Image icon inside cards */
+.static-img {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.static-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text inside cards */
+.static-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.static-num {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2ead49;
+}
+
+.static-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+
+/* === SHOP BY CATEGORY SECTION === */
+
+.homepage .static-frame .shop-category-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.shop-category-section .category-title {
+  font-family: "Roboto Serif", serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.shop-category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.shop-category-container button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 160px;
+  height: 180px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.shop-category-container button:hover {
+  transform: scale(1.05);
+}
+
+.shop-category-container button img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #4CAF50;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+.shop-category-container button span,
+.shop-category-container button .MuiButton-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .homepage .static-frame .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage .static-frame .info .foto {
+    width: 100%;
+    height: auto;
+  }
+
+  .static-box > div {
+    width: 90%;
+  }
+
+  .shop-category-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .shop-category-container button {
+    width: 100%;
+    height: auto;
+  }
+
+  .shop-category-container button img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
   
   
