@@ -51,7 +51,7 @@ export default function Statistics() {
           <img src="/img/statistcs.jpeg"/>
         </Stack> */}
         <Stack className={"info"}>
-         <img className="foto" src="/img/statistcs.jpeg"/>
+         <img className="foto" style={{backgroundColor: "black"}} src="/img/statistcs.jpeg"/>
          <Stack className={"static-box"}>
             <Stack className="static-user">
             <Box className="static-img">

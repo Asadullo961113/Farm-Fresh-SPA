@@ -7,7 +7,6 @@ const Footers = styled.div`
   width: 100%;
   height: 590px;
   display: flex;
-  margin-top:40px;
   background: linear-gradient(to right, #4CAF50, #8BC34A, #8BC34A,#8BC34A, #4CAF50);
   background-size: cover;
 `;

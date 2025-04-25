@@ -177,24 +177,28 @@ export default function FreshArrivals() {
                         </AspectRatio>
                       </CardOverflow>
                       <CardContent className="card-content">
-                        <Stack flexDirection="column" gap={2}>
-                          <Typography  className="product-name">
-                            {product.productName}
-                          </Typography>
-                          <Typography  className="product-price">
-                            Price: ${product.productPrice}
-                          </Typography>
-                          <Typography  className="product-left">
-                            Left Count: {product.productLeftCount} 
-                          </Typography>
-                          <Typography className="product-views">
+                      <Stack spacing={1.5}>
+                        <Typography className="product-name" sx={{ fontWeight: 600 }}>
+                          {product.productName}
+                        </Typography>
+
+                        <Typography className="product-price" sx={{ color: "#2e7d32", fontWeight: 500 }}>
+                          Price: ${product.productPrice}
+                        </Typography>
+
+                        <Typography className="product-left" sx={{ color: "#ef6c00" }}>
+                          Left Count: {product.productLeftCount}
+                        </Typography>
+
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <Typography className="product-views" sx={{ color: "#555" }}>
                             {product.productViews}
-                            <VisibilityIcon
-                                sx={{ fontSize: 25, marginLeft: "5px", color: "#333"}}
-                              />
                           </Typography>
+                          <VisibilityIcon sx={{ fontSize: 22, color: "#555" }} />
                         </Stack>
-                      </CardContent>
+                      </Stack>
+                    </CardContent>
+
                       <CardOverflow className="card-footer">
                         <Typography startDecorator={<DescriptionOutlinedIcon />} className="product-description">
                           {product.productDesc}

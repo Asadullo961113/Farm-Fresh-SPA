@@ -2,40 +2,47 @@
     width: 100%;
     height: auto;
     background-color: #fff;
+
   }
   
 /* === STATISTICS SECTION === */
 
 .homepage .static-frame {
   width: 100%;
-  padding: 60px 20px;
+  padding:  20px;
   background-color: #f8f9fa;
   box-sizing: border-box;
+
 }
 
 .homepage .static-frame .info {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* responsivlik uchun wrap */
   justify-content: center;
+  align-items: center;
   gap: 40px;
   margin-bottom: 60px;
+  margin-top:150px;
+  flex-direction: row; /* rasm chapda, box o'ngda */
 }
 
 .homepage .static-frame .info .foto {
-  height: 500px;
-  width: auto;
-  max-width: 100%;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  flex: 1;
+  width: 500px;
+  height: auto;
+  margin-left: 70px;
 }
 
 .homepage .static-frame .info .static-box {
+  flex: 1;
+  width: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
 }
+
 
 /* Card styles */
 .static-box > .static-user,
@@ -104,6 +111,7 @@
 .homepage .static-frame .shop-category-section {
   width: 100%;
   display: flex;
+  margin-top: 150px;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
@@ -124,7 +132,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 80px;
   margin-top: 20px;
 }
 
@@ -203,8 +211,8 @@
     width: 100%;
     height: 900px;
     display: flex;
-    background-color: #fd0b0b;
-    margin-top: 380px;
+    background-color:white;
+    margin-top: 80px;
   }
   .homepage .fresh-arrivals .fresh-section {
     margin-top: 45px;
@@ -345,8 +353,6 @@
 /* Ko'rishlar soni */
 .card-content .product-views {
   font-size: 20px;
-  margin-left: 230px;
-  margin-top: -145px;
   color: #333;
 }
 
@@ -360,7 +366,7 @@
 }
 
 .homepage .cards-frame .card .card-footer .product-description {
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   color: #050505;
   display: flex;
   align-items: center;
@@ -621,9 +627,10 @@
   /* Events */
   .homepage .events-frame {
     width: 100%;
-    height: 745px;
+    height: 725px;
     background:white;
     display: flex;
+    margin-top: 120px;
   }
   
   .homepage .events-frame .category-title {
@@ -678,6 +685,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 50px;
   }
   
   .homepage .events-frame .events-info .events-info-frame {

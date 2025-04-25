@@ -162,31 +162,32 @@ export default function Products(props: ProductsProps) {
   
   
 
-  return (
+  return (<>
     <div className="products">
       <Container>
-        <Stack flexDirection={"column"} alignItems={"center"}>
-            <Stack className={"single-search-big-box"}>
-              <input
-                type={"search"}
-                className={"single-search-input"}
-                name={"singleResearch"}
-                placeholder={"Type here"}
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") searchProductHandler();
-                }}
-                style={{ paddingRight: "60px" }} 
-              />
-              <Button
-                variant="contained"
-                endIcon={<SearchIcon style={{fontSize:25}}/>}
-                onClick={searchProductHandler}
-              >
-                Search
-              </Button>
-            </Stack>
+          <Stack direction="column" alignItems="center">
+          <Stack>
+          <Box position="relative" width={{ xs: '90%', md: '600px' }}>
+            <input
+              type="search"
+              className="single-search-input"
+              name="singleResearch"
+              placeholder="Type here"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') searchProductHandler();
+              }}
+            />
+            <Button
+              className="search-button"
+              onClick={searchProductHandler}
+            >
+              <SearchIcon style={{ fontSize: 40, position: 'absolute' }} />
+            </Button>
+          </Box>
+        </Stack>
+
   
           {/* Combined Sort and Category Container */}
           <Stack direction="column" spacing={2} className="sort-category-container">
@@ -348,9 +349,9 @@ export default function Products(props: ProductsProps) {
               <Box className="no-data">Products are not available!</Box>
             )}
           </Stack>
-  
+          
           {/* Pagination Section */}
-          <Stack className={"pagination-section"}>
+          <Box className="pagination-section">
             <Pagination
               count={products.length !== 0 ? productSearch.page + 1 : productSearch.page}
               page={productSearch.page}
@@ -361,14 +362,17 @@ export default function Products(props: ProductsProps) {
                     next: ArrowForwardIcon,
                   }}
                   {...item}
-                  color={"secondary"}
+                  color="secondary"
                 />
               )}
               onChange={paginationHandler}
             />
-          </Stack>
+          </Box>
+
+
         </Stack>
       </Container>
     </div>
+    </>
   );
 }

@@ -97,7 +97,7 @@ export function HomeNavbar(props: HomeNavbarProps) {
           <Box>
           <NavLink 
                 to="/" 
-                className={({ isActive }) => (isActive ? "underline" : "")}
+             
               >
                 <img src="/icons/Farm-Fresh logo.jpg" className="brand-logo" />
           </NavLink>
@@ -224,7 +224,6 @@ export function HomeNavbar(props: HomeNavbarProps) {
         </div>
 
         {/* Swiper Section for Text with Autoplay */}
-        {/* <Stack className={"header-frame"}> */}
         <Stack className={"detail"}>
           <Swiper
               slidesPerView={1} // Display one slide at a time
@@ -251,7 +250,7 @@ export function HomeNavbar(props: HomeNavbarProps) {
                   </Box>
                 </Stack>
                 <Link to="/products" className="shop-button">
-                  <Button variant="contained">SHOP NOW</Button>
+                  <Button variant="contained" >SHOP NOW</Button>
                 </Link>
                 <img src="/icons/arrow-right.svg" alt="Arrow" className="arrow-icon" />
               </SwiperSlide>
