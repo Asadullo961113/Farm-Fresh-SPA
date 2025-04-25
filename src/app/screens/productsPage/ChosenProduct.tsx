@@ -62,7 +62,6 @@ export default function ChosenProduct(props: ChosenProductsProps) {
       .then((data) => setRestaurant(data))
       .catch((err) => console.log(err));
   }, [productId]); 
-  
   if(!chosenProduct) return null
   return (
     <div className={"chosen-product"}>

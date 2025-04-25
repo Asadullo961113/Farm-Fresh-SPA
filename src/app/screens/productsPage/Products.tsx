@@ -110,7 +110,7 @@ export default function Products(props: ProductsProps) {
 
   /* HANDLER SECTION */
   const searchCollectionHandler = (collection: ProductCollection) => {
-    // `category`ni yangilash
+    // categoryni yangilash
     setProductSearch((prev) => ({
       ...prev,
       productCollection: collection,
@@ -118,7 +118,8 @@ export default function Products(props: ProductsProps) {
     }));
     
     // URLni yangilash
-    navigate(`/products?category=${collection}&sort=${productSearch.order}`);
+    navigate(`/products?category=${useCategory}&sort=${productSearch.order}`);
+
   };
 
   
