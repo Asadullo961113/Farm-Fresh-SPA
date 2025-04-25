@@ -304,7 +304,23 @@ export default function Products(props: ProductsProps) {
                       sx={{ backgroundImage: `url(${imagePath})` }}
                     >
                       <div className={"product-sale"}>{sizeVolume}</div>
-                      <Button
+
+                    </Stack>
+
+                    {/* Product Description Section */}
+                    <Box className={"product-desc"}>
+                      <span className={"product-title"}>{product.productName}</span>
+                      <div className={"product-price"}>
+                        <MonetizationOnIcon sx={{ marginRight: "4px" }} />
+                        {product.productPrice}
+                        {/* View Button */}
+                        <Button className={"view-btn"}>
+                          <Badge badgeContent={product.productViews} color="secondary">
+                            <RemoveRedEyeIcon
+                            />
+                          </Badge>
+                        </Button>
+                        <Button
                         className={"shop-btn"}
                         onClick={(e) => {
                           console.log("Add to cart button pressed");
@@ -320,29 +336,13 @@ export default function Products(props: ProductsProps) {
                       >
                         <img
                           src={"/icons/shopping-cart.svg"}
-                          style={{ display: "flex" }}
+                          style={{ display: "flex", width: "24px", height: "24px" }}
                         />
                       </Button>
-                      <Button className={"view-btn"} sx={{ right: "36px" }}>
-                        <Badge badgeContent={product.productViews} color="secondary">
-                          <RemoveRedEyeIcon
-                            sx={{
-                              color: product.productViews === 0 ? "gray" : "white",
-                            }}
-                          />
-                        </Badge>
-                      </Button>
-                    </Stack>
-                    <Box className={"product-desc"}>
-                      <span className={"product-title"}>
-                        {product.productName}
-                      </span>
-                      <div className={"product-desc"}>
-                        <MonetizationOnIcon />
-                        {product.productPrice}
                       </div>
                     </Box>
                   </Stack>
+
                 );
               })
             ) : (

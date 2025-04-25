@@ -119,9 +119,10 @@
 }
 
 .product-wrapper {
-  margin-left: 200px;
-  margin-top: 53px;
+  margin-left: 250px;
+  margin-top: 58px;
   width: 80%;
+  gap: 40px;
   height: 1300px;
   display: flex;
   flex-wrap: wrap;
@@ -139,132 +140,142 @@
   text-transform: capitalize;
 }
 
+/* General product card styling */
 .product-card {
-  margin-top: 10px;
-  margin-right: 64px;
-  width: 240px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image and sale badge */
 .product-img {
   position: relative;
-  width: 273px;
-  height: 275px;
+  height: 200px;
   background-size: cover;
-  border-radius: 0 50px 0 0;
+  background-position: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.product-img .product-sale {
-  margin: 10px;
-  width: 90px;
-  height: 30px;
+.product-sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff6347;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Add to cart button */
+.shop-btn {
+  position: absolute;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ff9200;
-  box-shadow: 4px 6px 20px #0000001a;
-  border-radius: 25px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 12px;
-  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
+
+.shop-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* View button */
+.view-btn {
+  position: absolute;
+  font-size: 10px;
+  color: #28a745;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  border-radius: 50%;
+
+}
+
+
+/* Product description */
 .product-desc {
-  width: 90%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
 }
 
 .product-title {
-  margin-top: 10px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.product-desc .product-desc {
-  margin-top: 2px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 24px;
-  color: #e3c08d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-img:before {
-  content: "";
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  border-radius: 0 50px 0 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.product-img:hover:before {
-  opacity: 1;
-}
-
-.product-img img {
-  position: absolute;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  z-index: 1;
-}
-
-.shop-btn {
-  position: absolute;
-  top: 217px;
-  left: 105px;
-  padding: 20px;
-  width: 64px;
-  height: 46px;
+.product-price {
+  font-size: 16px;
+  color: #28a745;
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 3;
-  background: rgba(198, 0, 255, 0.66);
-  border: 2px solid #d7b686;
-  border-radius: 10px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 10px;
-  color: #f8f8ff;
-  cursor: pointer;
 }
 
-.view-btn {
-  position: absolute;
-  top: 223px;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 3;
-  cursor: pointer;
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .product-img {
+    height: 180px;
+  }
+
+  .product-sale {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .shop-btn {
+    padding: 6px 12px;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .view-btn {
+    top: 5px;
+    right: 5px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
 }
 
-.product-img:hover .shop-btn,
-.product-img:hover .view-btn {
-  opacity: 1;
+@media (max-width: 480px) {
+  .product-card {
+    margin: 0 10px;
+  }
+
+  .product-img {
+    height: 160px;
+  }
 }
+
 
 .pagination-section {
   width: 100%;
